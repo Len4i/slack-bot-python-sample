@@ -1,0 +1,107 @@
+{
+	"type": "modal",
+	"callback_id": "create_test_submit",
+	"title": {
+		"type": "plain_text",
+		"text": "Stress Test"
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Create",
+		"emoji": true
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "plain_text",
+				"text": "Fill parameters of a new test",
+				"emoji": true
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "input",
+			"block_id": "{{ .NameBlock }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Test name",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ .NameAction }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": " ",
+					"emoji": true
+				}
+			}
+		},
+		{
+			"type": "input",
+			"block_id": "{{ .ServerBlock }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Server hostname",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ .ServerAction }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Example: dogfood.internal.k8s.com",
+					"emoji": true
+				}
+			}
+		},
+		{
+			"type": "input",
+			"block_id": "{{ .AgentVerBlock }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Agent Version",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ .AgentVerAction }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Example: 1.9.3",
+					"emoji": true
+				}
+			}
+		},
+		{
+			"type": "input",
+			"block_id": "{{ .AgentTypeBlock }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Agent type/language",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ .AgentTypeAction }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Example: java",
+					"emoji": true
+				}
+			}
+		}
+	]
+}

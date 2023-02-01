@@ -1,0 +1,77 @@
+{
+    "blocks": [
+        {
+            "type": "header",
+            "text": {
+                "type": "plain_text",
+                "text": "Sup?:robot_face:\n",
+                "emoji": true
+            }
+        },
+        {
+            "type": "divider"
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Manage ondemand k8s environments*\n\n_Temporary environment in  k8s cluster_\n_Created based on provided parameters_"
+            },
+            "accessory": {
+                "type": "image",
+                "image_url": "https://cncf-branding.netlify.app/img/projects/kubernetes/icon/color/kubernetes-icon-color.png",
+                "alt_text": "Ondemand Env"
+            }
+        },
+        {
+            "type": "actions",
+            "block_id": "{{ ondemand_env_block }}",
+            "elements": [
+                {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "Open",
+                        "emoji": true
+                    },
+                    "style": "primary",
+                    "action_id": "{{ ondemand_env_action }}"
+                }
+            ]
+        },
+        {
+            "type": "divider"
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Manage stress tests*\n_Created based on provided parameters_"
+            },
+            "accessory": {
+                "type": "image",
+                "image_url": "https://slackmojis.com/emojis/62755-homer_stressed/image/1669068213/homer_stressed.gif",
+                "alt_text": "Stress Tests"
+            }
+        },
+        {
+            "type": "actions",
+            "block_id": "{{ stress_test_block }}",
+            "elements": [
+                {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "Open",
+                        "emoji": true
+                    },
+                    "style": "primary",
+                    "action_id": "{{ stress_test_action }}"
+                }
+            ]
+        },
+        {
+            "type": "divider"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+	"blocks": [
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "New k8s env is being created"
+				}
+			]
+		},
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Env details"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Env name: k8s-ondemand-{{ .Name }}\nEnv hostname: {{ .Hostname }}.internal.k8s.com\nDB name: {{ .DBname }}\nImage tag: {{ .ImageTag }}"
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*Argocd link*\n<https://argocd.internal.k8s.com/applications/argocd/k8s-ondemand-{{ .Name }}|k8s-ondemand-{{ .Name }}>\n"
+			}
+		}
+	]
+}

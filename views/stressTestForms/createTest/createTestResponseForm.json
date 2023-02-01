@@ -1,0 +1,27 @@
+{
+	"blocks": [
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "New stress test is being created"
+				}
+			]
+		},
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Test details"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Test name: {{ .Name }}\nTest server: {{ .Server }}\nAgent version: {{ .AgentVer }}\nAgent type: {{ .AgentType }}"
+			}
+		}
+	]
+}

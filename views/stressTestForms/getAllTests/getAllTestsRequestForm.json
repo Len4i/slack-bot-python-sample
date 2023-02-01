@@ -1,0 +1,29 @@
+{
+	"type": "modal",
+	"callback_id": "get_tests_submit",
+	"title": {
+		"type": "plain_text",
+		"text": "Stress tests list"
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Get",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Get all stress tests alive now",
+				"emoji": true
+			}
+		}
+
+	]
+}

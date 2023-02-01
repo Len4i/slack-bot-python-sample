@@ -1,0 +1,47 @@
+{
+	"type": "modal",
+	"callback_id": "get_env_status_submit",
+	"title": {
+		"type": "plain_text",
+		"text": "Ondemand env status"
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Get",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Get ondemand env status",
+				"emoji": true
+			}
+		},
+		{
+			"type": "input",
+			"block_id": "{{ name_input_block }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Env name",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ name_input_action }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "storybook",
+					"emoji": true
+				}
+			}
+		}
+	]
+}

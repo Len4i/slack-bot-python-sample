@@ -1,0 +1,92 @@
+{
+    "type": "modal",
+    "title": {
+		"type": "plain_text",
+		"text": "Ondemand k8s env"
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+    "blocks": [
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Create new environment*\n\n_Spin up ondemand environment in stage k8s cluster_"
+            }
+        },
+        {
+            "type": "actions",
+            "block_id": "{{ create_env_block }}",
+            "elements": [
+                {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "Open",
+                        "emoji": true
+                    },
+                    "style": "primary",
+                    "value": "create_k8s_env",
+                    "action_id": "{{ create_env_action }}"
+                }
+            ]
+        },
+        {
+            "type": "divider"
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Get all existing ondemand k8s Envs*"
+            }
+        },
+        {
+            "type": "actions",
+            "block_id": "{{ get_all_envs_block }}",
+            "elements": [
+                {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "Open",
+                        "emoji": true
+                    },
+                    "style": "primary",
+                    "value": "get_all_k8s_env",
+                    "action_id": "{{ get_all_envs_action }}"
+                }
+            ]
+        },
+        {
+            "type": "divider"
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Get status of specific ondemand k8s Env*"
+            }
+        },
+        {
+            "type": "actions",
+            "block_id": "{{ get_env_status_block }}",
+            "elements": [
+                {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "Open",
+                        "emoji": true
+                    },
+                    "style": "primary",
+                    "value": "get_ondemand_env_status",
+                    "action_id": "{{ get_env_status_action }}"
+                }
+            ]
+        }
+    ]
+}

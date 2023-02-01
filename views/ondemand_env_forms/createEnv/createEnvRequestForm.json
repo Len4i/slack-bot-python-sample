@@ -1,0 +1,107 @@
+{
+	"type": "modal",
+	"callback_id": "create_env_submit",
+	"title": {
+		"type": "plain_text",
+		"text": "Ondemand k8s env"
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Create",
+		"emoji": true
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "plain_text",
+				"text": "Fill parameters of new environment",
+				"emoji": true
+			}
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "input",
+			"block_id": "{{ .NameBlock }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Enironment name",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ .NameAction }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "k8s-ondemand-${name}",
+					"emoji": true
+				}
+			}
+		},
+		{
+			"type": "input",
+			"block_id": "{{ .HostnameBlock }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Server hostname",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ .HostnameAction }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "${hostname}.internal.k8s.com",
+					"emoji": true
+				}
+			}
+		},
+		{
+			"type": "input",
+			"block_id": "{{ .DbNameBlock }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Database name",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ .DbNameAction }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Only underscore allowed | Ex: my_test_db",
+					"emoji": true
+				}
+			}
+		},
+		{
+			"type": "input",
+			"block_id": "{{ .ImageTagBlock }}",
+			"label": {
+				"type": "plain_text",
+				"text": "Container image tag",
+				"emoji": true
+			},
+			"element": {
+				"type": "plain_text_input",
+				"multiline": false,
+				"action_id": "{{ .ImageTagAction }}",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Example: 1.10.0-nightly.c507c1b4a",
+					"emoji": true
+				}
+			}
+		}
+	]
+}

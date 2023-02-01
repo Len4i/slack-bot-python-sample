@@ -1,0 +1,29 @@
+{
+	"type": "modal",
+	"callback_id": "get_env_submit",
+	"title": {
+		"type": "plain_text",
+		"text": "Ondemand k8s env"
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Get",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "Get all ondemand envs alive now",
+				"emoji": true
+			}
+		}
+
+	]
+}

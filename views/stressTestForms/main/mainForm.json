@@ -1,0 +1,92 @@
+{
+    "type": "modal",
+    "title": {
+		"type": "plain_text",
+		"text": "Stress Tests"
+	},
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+    "blocks": [
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Create new test*"
+            }
+        },
+        {
+            "type": "actions",
+            "block_id": "{{ .CreateTestBlock }}",
+            "elements": [
+                {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "Open",
+                        "emoji": true
+                    },
+                    "style": "primary",
+                    "value": "create_stress_test",
+                    "action_id": "{{ .CreateTestAction }}"
+                }
+            ]
+        },
+        {
+            "type": "divider"
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Get all existing tests*"
+            }
+        },
+        {
+            "type": "actions",
+            "block_id": "{{ .GetAllTestsBlock }}",
+            "elements": [
+                {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "Open",
+                        "emoji": true
+                    },
+                    "style": "primary",
+                    "value": "get_all_stress_tests",
+                    "action_id": "{{ .GetAllTestsAction }}"
+                }
+            ]
+        },
+        {
+            "type": "divider"
+        },
+        {
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "*Get status of specific test*"
+            }
+        },
+        {
+            "type": "actions",
+            "block_id": "{{ .GetTestStatusBlock }}",
+            "elements": [
+                {
+                    "type": "button",
+                    "text": {
+                        "type": "plain_text",
+                        "text": "Open",
+                        "emoji": true
+                    },
+                    "style": "primary",
+                    "value": "get_stress_test_status",
+                    "action_id": "{{ .GetTestStatusAction }}"
+                }
+            ]
+        }
+    ]
+}
